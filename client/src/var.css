@@ -1,0 +1,9 @@
+:root {
+    --color-text:black;
+    --color-primary:#FB6F92;
+    --color-hover:#FFC2D1;
+    --color-bg:#FFE5EC;
+    --color-border:#FF8FAB;
+    --color-shadow: 0.5rem 0.1rem 10rem 0.1rem #DD2C2F;
+
+}
