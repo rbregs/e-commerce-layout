@@ -1,15 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
-import { getImageUrl } from '../../utils';
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const searchContainerRef = useRef(null);
-  const isAuthenticated = useState(false)[0]; // Update this line
+  const searchIconRef = useRef(null); 
+  const isAuthenticated = useState(false)[0];
 
-  const handleClickOutside = (event) => {
-    if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+  const handleClickOutside = (e) => {
+    if (
+      searchContainerRef.current &&
+      !searchContainerRef.current.contains(e.target) &&
+      searchIconRef.current && 
+      !searchIconRef.current.contains(e.target)
+    ) {
       setShowSearch(false);
+      console.log("clicked outside");
     }
   };
 
@@ -33,14 +39,27 @@ export default function Header() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand mx-auto ms-5" href="#">Logo</a>
-        
-        <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`} id="navbarNav">
+        <a className="navbar-brand mx-auto ms-5" href="#">
+          Logo
+        </a>
+
+        <div
+          className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
           <div className="navbar-nav mx-auto">
-            <a className="nav-link ms-2" href="#home">Home</a>
-            <a className="nav-link ms-2" href="#about">About</a>
-            <a className="nav-link ms-2" href="#shop">Shop</a>
-            <a className="nav-link ms-2" href="#blog">Blog</a>
+            <a className="nav-link ms-2" href="#home">
+              Home
+            </a>
+            <a className="nav-link ms-2" href="#about">
+              About
+            </a>
+            <a className="nav-link ms-2" href="#shop">
+              Shop
+            </a>
+            <a className="nav-link ms-2" href="#blog">
+              Blog
+            </a>
           </div>
         </div>
 
@@ -67,11 +86,30 @@ export default function Header() {
                 </figure>
                 <span className="p-2">User</span>
               </button>
-              <ul className="dropdown-menu" aria-labelledby="dropDownMenuButton">
-                <li><a className="dropdown-item" href="/admin/dashboard">Dashboard</a></li>
-                <li><a className="dropdown-item" href="/me/orders">Orders</a></li>
-                <li><a className="dropdown-item" href="/me/profile">Profile</a></li>
-                <li><a className="dropdown-item text-danger" href="/">Logout</a></li>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropDownMenuButton"
+              >
+                <li>
+                  <a className="dropdown-item" href="/admin/dashboard">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/me/orders">
+                    Orders
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/me/profile">
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item text-danger" href="/">
+                    Logout
+                  </a>
+                </li>
               </ul>
             </div>
           ) : (
@@ -81,9 +119,11 @@ export default function Header() {
           )}
 
           <i
-            className="addPadding fa-solid fa-magnifying-glass me-5" // Add margin end here
+            ref={searchIconRef} // Assign ref to the search icon
+            className="addPadding fa-solid fa-magnifying-glass me-5"
             onClick={(e) => {
-              e.stopPropagation(); // Prevent click event from bubbling up
+              console.log("clicked search");
+              e.stopPropagation();
               setShowSearch(true);
             }}
           ></i>
@@ -91,7 +131,10 @@ export default function Header() {
       </nav>
 
       {showSearch && (
-        <div ref={searchContainerRef} className="search-container container-fluid m-0 p-0">
+        <div
+          ref={searchContainerRef} // Assign ref to the search container
+          className="search-container container-fluid m-0 p-0"
+        >
           <div className="row">
             <div className="col-12">
               <form className="search my-2" action="" method="get">
@@ -106,7 +149,6 @@ export default function Header() {
                     className="form-control"
                     placeholder="Enter Product Name ..."
                     name="keyword"
-                    value=""
                   />
                 </div>
               </form>

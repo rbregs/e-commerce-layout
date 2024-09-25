@@ -18,18 +18,6 @@ body {
    padding: 0;
    margin: 0;
 }
-.links a {
-
-    border-bottom: 0.25rem solid transparent; 
-    color: inherit;
-    text-decoration: none;
-    transition: border-bottom-color 0.3s ease-in-out;
-}
-
-.links a:hover {
-    border-bottom-color: var(--color-border); 
-    cursor: pointer
-}
 
 
 .addPadding {
@@ -37,19 +25,14 @@ body {
 }
 
 .search-container {
-    /* box-shadow: var(--color-shadow); */
     background-color: var(--color-bg);
     border: none;
 
 }
 
-  /* .product-container {
-    margin: 0;
-    padding: 0;
-    width: 90vw;
-    margin-left: 4rem;
-    margin-top: 2rem;
-  } */
+.navbar ul li a:hover {
+  background-color: var(--color-bg) !important;
+}
 
   @media (max-width:8){}
 
