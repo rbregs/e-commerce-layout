@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is imported
 
 export default function MyCarousel() {
   const [index, setIndex] = useState(0);
@@ -12,42 +13,42 @@ export default function MyCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item className="carousel">
         <img
-          className="d-block w-100"
+          className="d-block w-100 img-fluid"
           src="https://media.istockphoto.com/id/1408439145/photo/autumn-skincare-and-autumn-makeup-concept-with-beauty-products-on-table.jpg?s=1024x1024&w=is&k=20&c=UOOXsTxVaf3hGdht0032thVCpo2x8fZmttXLZzfAuKA="
           alt="First Slide"
         />
         <div className="carousel-caption-overlay">
-          <Carousel.Caption>
-            <h3 className="text-left">First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Carousel.Caption className="text-left">
+            <h3 className="d-none d-md-block">First slide label</h3>
+            <p className="d-none d-sm-block">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </div>
       </Carousel.Item>
+
       <Carousel.Item className="carousel">
         <img
-          className="d-block w-100"
+          className="d-block w-100 img-fluid"
           src="https://media.istockphoto.com/id/1418265792/photo/cosmetics-swatches-peach-beige-red-and-coral-toned-styled-cosmetics-flat-lay-closeup-colour.jpg?s=1024x1024&w=is&k=20&c=34WiYgBL21FcU4_zl5ionJ27lIV8Zk9rMpNXeOSOW8Q="
           alt="Second Slide"
         />
         <div className="carousel-caption-overlay">
-          <Carousel.Caption>
+          <Carousel.Caption className="text-center">
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </div>
       </Carousel.Item>
+
       <Carousel.Item className="carousel">
         <img
-          className="d-block w-100"
+          className="d-block w-100 img-fluid"
           src="https://media.istockphoto.com/id/1460479030/vector/makeup-set-realistic-cosmetic-products-eye-shadow-powder-blush-eyeliner-concealer-lipstick.jpg?s=1024x1024&w=is&k=20&c=nkgM-cdyECpF49ytqC8g-JCE3nh8GOhi8D1ZQyX4N0Q="
           alt="Third Slide"
         />
         <div className="carousel-caption-overlay">
-          <Carousel.Caption>
+          <Carousel.Caption className="text-right">
             <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </div>
       </Carousel.Item>

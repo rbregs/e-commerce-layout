@@ -43,7 +43,29 @@ body {
 
 }
 
-.carousel-item {
+  /* .product-container {
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    margin-left: 4rem;
+    margin-top: 2rem;
+  } */
+
+  .viewAll{
+    background-color: var(--color-primary);
+  }
+
+  .card-img-top {
+    height: 12.5rem; 
+    object-fit: contain; 
+  }
+  
+  .product-container {
+    height: 80vh;
+  }
+
+  /* ---------carousel */
+  .carousel-item {
     height: 90vh;
 
   }
@@ -78,16 +100,4 @@ body {
     margin-top: 25rem;
     color: white; 
     z-index: 2; 
-  }
-
-  .product-container {
-    margin: 0;
-    padding: 0;
-    width: 90vw;
-    margin-left: 4rem;
-    margin-top: 2rem;
-  }
-
-  .viewAll{
-    background-color: var(--color-primary);
   }

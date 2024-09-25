@@ -3,10 +3,19 @@ import React from "react";
 export default function ProductCollection() {
   return (
     <div className="product-container container-fluid">
-      <div className="row">
-        <div className="col-3">
-          <div className="card" style={{width: "18rem;"}}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+      <div className="text-center p-3">
+        <h3>Featured Product</h3>
+      </div>
+
+      <div className="row justify-content-center">
+        {/* Card 1 */}
+        <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+          <div className="card w-100">
+            <img
+              className="card-img-top"
+              src="https://www.innisfree.com/my/en/resources/upload/product/35629_l.png"
+              alt="Card image cap"
+            />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
               <p className="card-text">
@@ -19,9 +28,15 @@ export default function ProductCollection() {
             </div>
           </div>
         </div>
-        <div className="col-3">
-        <div className="card" style={{width: "18rem;"}}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+
+        {/* Card 2 */}
+        <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+          <div className="card w-100">
+            <img
+              className="card-img-top"
+              src="https://www.innisfree.com/my/en/resources/upload/product/35629_l.png"
+              alt="Card image cap"
+            />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
               <p className="card-text">
@@ -34,9 +49,15 @@ export default function ProductCollection() {
             </div>
           </div>
         </div>
-        <div className="col-3">
-        <div className="card" style={{width: "18rem;"}}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+
+        {/* Card 3 */}
+        <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+          <div className="card w-100">
+            <img
+              className="card-img-top"
+              src="https://www.innisfree.com/my/en/resources/upload/product/35629_l.png"
+              alt="Card image cap"
+            />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
               <p className="card-text">
@@ -49,9 +70,15 @@ export default function ProductCollection() {
             </div>
           </div>
         </div>
-        <div className="col-3">
-        <div className="card" style={{width: "18rem;"}}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+
+        {/* Card 4 */}
+        <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+          <div className="card w-100">
+            <img
+              className="card-img-top"
+              src="https://www.innisfree.com/my/en/resources/upload/product/35629_l.png"
+              alt="Card image cap"
+            />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
               <p className="card-text">
@@ -65,9 +92,11 @@ export default function ProductCollection() {
           </div>
         </div>
       </div>
+
+      {/* Button Row */}
       <div className="row">
-        <div className="col-12 p-2 border  d-flex justify-content-center my-5">
-          <button className="viewAll p-2">this is a button</button>
+        <div className="col-12 d-flex justify-content-center my-5">
+          <button className="viewAll btn btn-primary p-2">This is a button</button>
         </div>
       </div>
     </div>
