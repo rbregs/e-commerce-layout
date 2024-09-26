@@ -103,3 +103,10 @@ body {
     z-index: 2; 
   }
   
+  .d-grid .btn {
+    background-color: var(--color-primary);
+  }
+
+  .d-grid .btn:hover {
+    background-color: var(--color-hover);
+  }

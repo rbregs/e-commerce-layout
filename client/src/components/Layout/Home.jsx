@@ -4,6 +4,7 @@ import ProductCollection from './ProductCollection'
 import ProductofTheMonth from './ProductofTheMonth'
 import Section from './Section'
 import Footer from './Footer'
+import Login from '../auth/Login'
 
 export default function Home() {
   return (

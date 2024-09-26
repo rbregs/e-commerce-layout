@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import {Link} from "react-router-dom"
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
@@ -39,9 +40,9 @@ export default function Header() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand mx-auto ms-5" href="#">
+        <Link to ="/" className="navbar-brand mx-auto ms-5" >
           Logo
-        </a>
+        </Link>
 
         <div
           className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}
@@ -113,13 +114,13 @@ export default function Header() {
               </ul>
             </div>
           ) : (
-            <a href="/login" className="btn" id="login_btn">
+            <Link to="/login" className="btn" id="login_btn">
               <i className="addPadding fa-regular fa-user"></i>
-            </a>
+            </Link>
           )}
 
           <i
-            ref={searchIconRef} // Assign ref to the search icon
+            ref={searchIconRef} 
             className="addPadding fa-solid fa-magnifying-glass me-5"
             onClick={(e) => {
               console.log("clicked search");
@@ -132,7 +133,7 @@ export default function Header() {
 
       {showSearch && (
         <div
-          ref={searchContainerRef} // Assign ref to the search container
+          ref={searchContainerRef}
           className="search-container container-fluid m-0 p-0"
         >
           <div className="row">
