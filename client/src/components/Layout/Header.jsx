@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg ms-3">
+      <nav className="navbar navbar-expand-lg ">
         <button
           className="navbar-toggler"
           type="button"
@@ -47,7 +47,7 @@ export default function Header() {
           className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}
           id="navbarNav"
         >
-          <div className="navbar-nav mx-auto">
+          <div className="navbar-nav">
             <a className="nav-link ms-2" href="#home">
               Home
             </a>

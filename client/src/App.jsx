@@ -12,8 +12,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Home />
+    <div className="container-fluid">
+        <Header />
+        <Home />
+    </div>
+    
     </>
   )
 }

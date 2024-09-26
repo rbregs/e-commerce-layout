@@ -3,7 +3,7 @@ import React from "react";
 export default function ProductCollection() {
   return (
     <>
-      <div className="product-container container-fluid my-5">
+      <div className="p1 mx-3">
         <div className="text-center p-3">
           <h3>Featured Product</h3>
         </div>
