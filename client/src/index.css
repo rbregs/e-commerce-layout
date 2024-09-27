@@ -1,112 +1,118 @@
-@import './var.css';
+@import "./var.css";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-        background-color: var(--color-bg);
-        width: 100%;
-        margin: 0;
-        padding: 0;
+  background-color: var(--color-bg);
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .navbar {
-    /* background-color:var(--color-bg); */
-    margin: 0;
-    width: 100%;
-    
+  /* background-color:var(--color-bg); */
+  margin: 0;
+  width: 100%;
 }
 
 .avatar {
-   padding: 0;
-   margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-
 .addPadding {
-    padding: 0.7rem;
+  padding: 0.7rem;
 }
 
 .search-container {
-    background-color: var(--color-bg);
-    border: none;
-
+  background-color: var(--color-bg);
+  border: none;
 }
 
 .navbar ul li a:hover {
   background-color: var(--color-bg) !important;
 }
 
+/* ----------------------------------- */
+.viewAll {
+  background-color: var(--color-primary);
+}
 
-  /* ----------------------------------- */
-  .viewAll{
-    background-color: var(--color-primary);
-  }
+.card-img-top {
+  height: 12.5rem;
+  object-fit: contain;
+}
 
-  .card-img-top {
-    height: 12.5rem; 
-    object-fit: contain; 
-  }
-  
-  .product-container {
-    height: 80vh;
-  }
+.product-container {
+  height: 80vh;
+}
 
-  /* ---------carousel */
-  .carousel {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-  }
-  .carousel-item {
-    height: 90vh;
-    width: 100%;
+/* ---------carousel */
+.carousel {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.carousel-item {
+  height: 90vh;
+  width: 100%;
+}
 
-  }
-  
-  .carousel-item img {
-    object-fit: cover;
-    height: 100%; 
-  }
-  
-  .container-fluid button {
-    border: none;
-  } 
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
 
-  .container-fluid {
-    margin: 0;
-    padding: 0;
-  }
+.container-fluid button {
+  border: none;
+}
 
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
 
-  .carousel-caption-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    z-index: 1; 
-  }
-  
-  .carousel-caption {
-    position: relative;
-    margin-right:70rem;
-    text-align: left;
-    margin-top: 25rem;
-    color: white; 
-    z-index: 2; 
-  }
-  
-  .d-grid .btn {
-    background-color: var(--color-primary);
-  }
+.carousel-caption-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
 
-  .d-grid .btn:hover {
-    background-color: var(--color-hover);
-  }
+.carousel-caption {
+  position: relative;
+  margin-right: 70rem;
+  text-align: left;
+  margin-top: 25rem;
+  color: white;
+  z-index: 2;
+}
+
+.d-grid .btn {
+  background-color: var(--color-primary);
+}
+
+.d-grid .btn:hover {
+  background-color: var(--color-hover);
+}
+
+.sidemenu a {
+  color: var(--color-text)
+}
+
+.sidemenu a:hover {
+  color: var(--color-primary)
+}
+
+.sidemenu .active-link {
+  background-color: #FFC2D1; 
+  color: #FB6F92; 
+}

@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const searchContainerRef = useRef(null);
-  const searchIconRef = useRef(null); 
+  const searchIconRef = useRef(null);
   const isAuthenticated = useState(false)[0];
+  const isAdmin = useState(false)[0]
 
   const handleClickOutside = (e) => {
     if (
       searchContainerRef.current &&
       !searchContainerRef.current.contains(e.target) &&
-      searchIconRef.current && 
+      searchIconRef.current &&
       !searchIconRef.current.contains(e.target)
     ) {
       setShowSearch(false);
@@ -40,7 +41,7 @@ export default function Header() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <Link to ="/" className="navbar-brand mx-auto ms-5" >
+        <Link to="/" className="navbar-brand mx-auto ms-5">
           Logo
         </Link>
 
@@ -68,21 +69,21 @@ export default function Header() {
           <span className="headerCart p-2 m-0">
             <i className="fa-solid fa-cart-shopping"></i> (0)
           </span>
-
-          {isAuthenticated ? (
+          {!isAuthenticated ? (
             <div className="dropdown">
               <button
-                className="btn dropdown-toggle"
+                className="btn dropdown-toggle d-flex align-items-center"
                 type="button"
                 id="dropDownMenuButton"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <figure className="avatar avatar-nav me-2 g-0">
+                <figure className="avatar avatar-nav me-2 mb-0">
                   <img
                     src="../images/default_avatar.jpg"
                     className="rounded-circle"
                     style={{ width: "40px", height: "40px" }}
+                    // alt="User Avatar"
                   />
                 </figure>
                 <span className="p-2">User</span>
@@ -91,11 +92,14 @@ export default function Header() {
                 className="dropdown-menu"
                 aria-labelledby="dropDownMenuButton"
               >
-                <li>
+                {isAdmin && (
+                  <li>
                   <a className="dropdown-item" href="/admin/dashboard">
                     Dashboard
                   </a>
                 </li>
+                )}
+                
                 <li>
                   <a className="dropdown-item" href="/me/orders">
                     Orders
@@ -120,7 +124,7 @@ export default function Header() {
           )}
 
           <i
-            ref={searchIconRef} 
+            ref={searchIconRef}
             className="addPadding fa-solid fa-magnifying-glass me-5"
             onClick={(e) => {
               console.log("clicked search");

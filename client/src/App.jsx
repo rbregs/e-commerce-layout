@@ -6,6 +6,9 @@ import Home from './components/Layout/Home';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import UserLayout from './components/userLayout/UserLayout';
+import Profile from './components/userLayout/Profile';
+import UpdateProfile from './components/userLayout/UpdateProfile';
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/me/profile" element={< Profile/>} />
+          <Route path="/me/update_profile" element={<UpdateProfile/>} />
         </Routes>
       </div>
     </BrowserRouter>
